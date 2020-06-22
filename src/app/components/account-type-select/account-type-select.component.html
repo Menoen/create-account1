@@ -1,0 +1,34 @@
+<div class="auth-block">
+    <h3 class="head-title">Select Account Type</h3>
+    <div class="account-info">
+      <h4 class="font-bold">{{accountInfo.name}}</h4>
+      <p>{{accountInfo.tips}}</p>
+    </div>
+    <a [routerLink]="['/home']">< Edit relationship account</a>
+    <hr>
+    <div class="form-container">
+      <h4 class="font-bold">Please select the account you would like to open</h4>
+      <div class="form-radio" *ngFor="let radio of radioList">
+        <label for="{{radio.value}}" class="content-radio" >
+          <input type="radio" name="type-radio" value="{{radio.value}}" id="{{radio.value}}" [(ngModel)]="accountInfo.type" (click)="changeType(radio.value)" required>{{radio.name}}
+        </label>
+      </div>
+      <h6>Select currency</h6>
+      <select name="currency" id="currency" class="currency" [(ngModel)]="accountInfo.currency" required>
+        <option value="">Select currency</option>
+        <option [value]="item" *ngFor="let item of accountInfo.currencyList">{{item}}</option>
+      </select>
+    </div>
+    <hr>
+    <p class="botton-tips">Your account will be opened immediately after the confirmatlon by authorization code and is
+        immediately ready for use. If in doubt, please contact the advisor via Citiphone.</p>
+    <div>
+      <div class="form-group">
+        <button type="submit" class="btn-blue" (click)="doNext()">Next</button>
+      </div>
+      <div class="form-group">
+        <button type="reset" class="btn-grey" (click)="cancel()">Cancel</button>
+      </div>
+    </div>
+  </div>
+  

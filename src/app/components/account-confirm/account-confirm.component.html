@@ -1,0 +1,23 @@
+<div class="auth-block">
+  <h3 class="head-title">Review & Confirm</h3>
+  <p class="head-noti">Please review and confirm the details below before proceeding.</p>
+  <div class="confirm-contain">
+    <div class="confirm-info">
+      <h4>Currency</h4>
+      <p>{{accountInfo.currency}}</p>
+    </div>
+    <div class="confirm-info">
+      <h4>Account Type</h4>
+      <p>{{accountInfo.type}}</p>
+    </div>
+  </div>
+  <a [routerLink]="['/type']">< Edit details</a>
+  <div>
+    <div class="form-group">
+      <button type="submit" class="btn-blue" (click)="doSubmit()">Confirm</button>
+    </div>
+    <div class="form-group">
+      <button type="reset" class="btn-grey" (click)="cancel()">Cancel</button>
+    </div>
+  </div>
+</div>

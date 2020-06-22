@@ -1,1 +1,113 @@
 /* You can add global styles to this file, and also import other style files */
+@main-color:#e8f2ff;
+@bg-color:white;
+@confirm-color:#3791fa;
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 500;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+button {
+  border: none;
+}
+.font-bold {
+  font-weight: bold;
+}
+// outside
+.auth-block {
+  margin: 0 auto;
+  max-width: 1000px;
+  min-width: 290px;
+  background:@bg-color;
+  padding: 30px 40px 10px;
+  overflow: hidden;
+}
+
+//content
+.form-blue {
+  margin: 10px 0;
+  >label {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+  }
+  input {
+    width: 23px;
+    height: 23px;
+    float: left;
+    margin-top: 10px;
+    margin-right: 7px;
+    // &:before {
+    //   content: '\20dd'; 
+    //   display: inline-block;
+    //   visibility: visible;
+    //   font-size: 26px;
+    // }
+  }
+  span {
+    display: block;
+    max-width: 80%;
+    font-weight: normal;
+    padding-left: 33px;
+    cursor: pointer;
+  }
+  
+}
+// .radio-checked::before{
+//   content: '\25cf'; 
+//   display: inline-block;
+//   visibility: visible;
+//   font-size: 26px;
+// }
+// button
+.form-group {
+  margin: 20px 0;
+  width: 100%;
+  text-align: center;
+}
+.btn-blue {
+  height: 40px;
+  line-height: 40px;
+  color: @bg-color;
+  font-weight: 600;
+  border-radius: 4px;
+  background-color: @confirm-color;
+  cursor: pointer;
+}
+@media screen and (max-width: 400px) {
+  .btn-blue {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 400px) {
+  .btn-blue {
+    width: 200px;
+  }
+}
+.btn-grey {
+  background-color: @bg-color;
+  cursor: pointer;
+}
+
+.botton-tips {
+  overflow-wrap: normal;
+  text-align: center;
+}

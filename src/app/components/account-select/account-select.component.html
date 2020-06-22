@@ -1,0 +1,21 @@
+<div class="auth-block">
+  <h3 class="head-title">Select Account</h3>
+  <p class="head-noti">Please select the relationship account</p>
+  <div class="form-radio form-blue" *ngFor="let radio of radioList">
+    <label for="{{radio.value}}">
+      <input type="radio" name="select-radio" value="{{radio.value}}"  [ngClass]="{'radio-check':radio.checked}"
+      id="{{radio.value}}" [(ngModel)]="accountInfo.name" (click)="doChange(radio.tips)" required>{{radio.name}}
+      <span>{{radio.tips}}</span>
+    </label>
+  </div>
+  <p class="botton-tips">Your account will be opened immediately after the confirmatlon by authorization code and is
+      immediately ready for use. If in doubt, please contact the advisor via Citiphone.</p>
+  <div>
+    <div class="form-group">
+      <button type="submit" class="btn-blue" (click)="doNext()">Next</button>
+    </div>
+    <div class="form-group">
+      <button type="reset" class="btn-grey" (click)="cancel()">Cancel</button>
+    </div>
+  </div>
+</div>
